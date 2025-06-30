@@ -11,88 +11,102 @@
             box-sizing: border-box;
         }
         body{
-            background-color:azure;
-            margin: 2px;
+            margin: 5px;
+            background-color: azure;
         }
-        .Image{
-            padding: 0;
-            display: block;
-        }
-        img{
-            display: block;
-        }
-        .Name{
-            text-align:right;
-            padding: 0;
-
-        }
-        header,footer{
-            border: 2px solid black;
-            border-radius: 15px;
-            background-color:blanchedalmond ;
-            text-align: center;
-            padding: 10px;
-        }
-        aside{
-            display: flex;
-            margin-top: 4px;
-        }
-        section1{
+        .row{
+            display:flex;
             border: 2px solid black;
             border-radius: 10px;
-            background-color: aquamarine;
-            max-width: 450px;
-            padding-left: 6px;
-
+            background-color: antiquewhite;
         }
-        section2{
-            border: 2px solid black;
-            border-radius: 10px;
-            background-color:bisque;
+        .col-2{
+            width: 30vw;
             padding-left: 5px;
-            margin: 10px;
-            max-width: 2000px;
-
+        }
+        .col-10{
+            width: 70vw;
+            text-align: right;
+            padding-right: 3px;
+            margin:auto 0;
+        }
+        main{
+            display: inline;
+        }
+        .one{
+            margin-top: 3px;
+            margin-right: 5px;
+            width: 20vw;
+            display: inline-block;
+            background-color: aquamarine;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .two{
+            margin-top: 3px;
+            margin-left: 5px;
+            width: 77vw;
+            display: inline-block;
+            background-color: aquamarine;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .image{
+            text-align: right;
+        }
+        .three{
+            width:33%;
+            list-style: none;
+            padding:10px;
+            
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="Image">
-            <img src="BPIT.jpg" width="100px" alt="BPIT">
-        </div>
-        <div class="Name"><h1><b>Bhagwan Parshuram Institute of Technology</b></h1></div>
+ <header>
+    <div class="row">
+        <div class="col-2"><img src="BPIT.jpg" alt="BPIT" width="35%"></div>
+        <div href="https://bpitindia.ac.in/" class="col-10"><h1>Bhagwan Parshuram Institute of Technology</h1></div>
+    </div>
     </header>
     <main>
-        <aside>
-            <section1>
-                <h2>Contact</h2>
-                <ul>
-                    <li>Email</li>
-                    <li>Phone</li>
-                </ul>
-            </section1>
-            <section2>
-            <p>I'm Motivated and curious Information Technology undergraduate, actively building foundational knowledge in cybersecurity. Passionate
+        <section class="one">
+            <h3>Contact</h3>
+            <li>
+                <ul>Phone no.</ul>
+                <ul>Email</ul>
+                <ul>Linkdin</ul>
+            </li>
+        </section>
+        <section class="two">
+            <img src="kautilya.jpg" alt="kautilya" class="image" width="100px">
+            <p>I'm motivated and curious Information Technology undergraduate, actively building foundational knowledge in cybersecurity. Passionate
             about understanding how digital systems can be protected from emerging threats, and driven by a broader interest in technological
             innovation and problem-solving. Eager to apply and enhance my skills through hands-on projects, internships, and collaborative
             opportunities. Committed to evolving as a well-rounded professional capable of contributing to the development of secure, efficient,
             and impactful tech solutions.</p>
-            <img src="" alt="">
-
-            </section2>
-        </aside>
-        <div>
-            <h2>Education</h2>
-            <ul>
-                <li>Schooling</li>
-                <li>College</li>
-                <li>Degree</li>
-            </ul>
-        </div>
+            <H3>Education</H3>
+            <li>
+                <ol>St. Mark's School, Janakpuri</ol>
+                <ol>Bhagwan Parshuram Institute of Technology, Rohini</ol>
+            </li>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section><h3 style="text-align: center;"><u>PROJECTS</u></h3>
+            <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+                <li class="three" style="border: 2px solid black; border-radius: 2px; background-color: beige;  height: 40px; width: 100px;">Project1</li>
+                <li class="three" style="border: 2px solid black; border-radius: 2px; background-color: beige;  height: 40px; width: 100px;">Project2</li>
+                <li class="three" style="border: 2px solid black; border-radius: 2px; background-color: beige;  height: 40px; width: 100px;">Project3</li>
+            </div></section>
     </main>
-    <footer>
-        <h2>Thank you!</h2>
+    <footer class="row" style="height: 50px; width: 99vw; margin-top: 7px;">
+        <h5 style="padding: 10px;">Address: PSP-4, Sector-17, Rohini, Delhi-110089</h5>
+        <h5 href="bpitindia@yahoo.com" style="padding: 10px; margin:0 auto">Contact us at Mail</h5>
     </footer>
+
 </body>
 </html>
