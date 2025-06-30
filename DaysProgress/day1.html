@@ -5,41 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dayone</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body{
             background-color:azure;
+            margin: 2px;
+        }
+        .Image{
+            padding: 0;
+            display: block;
+        }
+        img{
+            display: block;
+        }
+        .Name{
+            text-align:right;
+            padding: 0;
+
         }
         header,footer{
             border: 2px solid black;
             border-radius: 15px;
-            padding: 20px;
-            text-align: center;
             background-color:blanchedalmond ;
+            text-align: center;
+            padding: 10px;
         }
         aside{
-            border: 2px solid black;
+            display: flex;
             margin-top: 4px;
+        }
+        section1{
+            border: 2px solid black;
             border-radius: 10px;
             background-color: aquamarine;
-            max-width: 110px;
-            padding-left: 20px;
+            max-width: 450px;
+            padding-left: 6px;
+
+        }
+        section2{
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color:bisque;
+            padding-left: 5px;
+            margin: 10px;
+            max-width: 2000px;
+
         }
     </style>
 </head>
 <body>
-    <header><b>Bhagwan Parshuram Institute of Technology</b></header>
+    <header>
+        <div class="Image">
+            <img src="BPIT.jpg" width="100px" alt="BPIT">
+        </div>
+        <div class="Name"><h1><b>Bhagwan Parshuram Institute of Technology</b></h1></div>
+    </header>
     <main>
         <aside>
-            <div>
+            <section1>
                 <h2>Contact</h2>
                 <ul>
                     <li>Email</li>
                     <li>Phone</li>
                 </ul>
-            </div>
+            </section1>
+            <section2>
+            <p>I'm Motivated and curious Information Technology undergraduate, actively building foundational knowledge in cybersecurity. Passionate
+            about understanding how digital systems can be protected from emerging threats, and driven by a broader interest in technological
+            innovation and problem-solving. Eager to apply and enhance my skills through hands-on projects, internships, and collaborative
+            opportunities. Committed to evolving as a well-rounded professional capable of contributing to the development of secure, efficient,
+            and impactful tech solutions.</p>
+            <img src="" alt="">
+
+            </section2>
         </aside>
-        <section>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, eius voluptate sit similique, hic consequuntur ut iusto quibusdam rem a quo provident recusandae amet quasi! Similique error et itaque voluptatibus excepturi explicabo nulla ullam reprehenderit.</p>
-        </section>
         <div>
             <h2>Education</h2>
             <ul>
@@ -49,6 +91,8 @@
             </ul>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <h2>Thank you!</h2>
+    </footer>
 </body>
 </html>
