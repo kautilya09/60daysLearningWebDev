@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(192, 228, 230);
+    height: 100vh;
+    width: 100vw;
+}
+
+#todo-form{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+    width: 30%;
+    height: 70%;
+    box-shadow:0 0 5px gray;
+}
+
+#todo-form > div{
+    text-align: center;
+    margin: 45px 0;
+}
