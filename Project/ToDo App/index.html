@@ -4,51 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo App</title>
-    <script src="scripts/controller.js" defer type="module"></script>  <!-- defer is used to run the javascript after reading the body
-    async makes code run faster by running it paralelly bindvents make the window's html to load first, we need to add and event listener 'load' -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <script src="./scripts/controller.js" type="module"></script>
     <link rel="stylesheet" href="./Assets/style.css">
 </head>
 <body>
     <div class="container">
-        <div id="todo-form">
-            <h1>To Do App</h1>
-            <div>
-                <label for="" id="task-id">Task Id</label>
-                <input type="text" placeholder="Type Id here">
+        <div id="todo-form" style="margin: 10px;">
+            <h1 style="color:darkolivegreen;">To Do App</h1>
+            <div class="task-details">
+                <label for="">Task Id</label>
+                <label id="id"></label>
             </div>
-            <div>
-                <label for="" id="task-name"> Task Name</label>
-                <input type="text" placeholder="Type Name here">
+            <div class="task-details">
+                <label for="">Task Name</label>
+                <input type="text" id="task-name" class="inputs" placeholder="Type Name here">
                 <span id="name-error"></span>
             </div>
-            <div>
-                <label for="" id="description">Description</label>
-                <textarea cols="20" rows="5"></textarea>
+            <div class="task-details">
+                <label for="">Description</label>
+                <textarea class="inputs" id="description" cols="20" placeholder="Add"></textarea>
             </div>
-            <div>
-             <label for="" id="date">Date</label>
-             <input type="date">
+            <div class="task-details">
+             <label for="">Date</label>
+             <input id="date" class="inputs" type="date" placeholder="dd/mm/yyyy">
             </div>
-            <div>
-                <label for="" id="time">Time</label>
-                <input type="time">
+            <div class="task-details">
+                <label for="">Time</label>
+                <input class="inputs" id="time" type="time">
             </div>
-            <div>
-                <label for="" id="photo">Photo</label>
-                <input type="url">
+            <div class="task-details">
+                <label for="">Photo</label>
+                <input class="inputs" type="url" id="photo" placeholder="photo link here">
             </div>
         </div>
-        <div id="Totals"></div>
-        <p>Total records <span id="Total">0</span> Marked records <span id="Marked">0</span> Unmarked records <span id="Unmarked">0</span></p>
-        <div id="operations">
-            <button id="add">Add</button>
-            <button id="delete">Delete</button>
-            <button id="update">Update</button>
-                <button id="search">Search</button>
-            <button id="save">Save</button>
-            <button id="clear-all">Clear all</button>
+        <br>
+        <div id="totals">
+            <p>Total records <span id="Total">0</span> Marked records <span id="Marked">0</span> Unmarked records <span id="Unmarked">0</span></p>
         </div>
-        <div id="records">
+        <div id="operations" style="margin: 50px;">
+            <button id="add"><strong>Add</strong></button>
+            <button id="delete"><strong>Delete</strong></button>
+            <button id="update"><strong>Update</strong></button>
+            <button id="search"><strong>Search</strong></button>
+            <button id="save"><strong>Save</strong></button>
+            <button id="clear-all"><strong>Clear all</strong></button>
+        </div>
+        <div id="records" style="margin: 10px;">
             <table>
                 <thead>
                     <tr>
@@ -61,7 +63,9 @@
                         <th>Operations</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody id="task-list">
+
+                </tbody>
             </table>
         </div>
     </div>

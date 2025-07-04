@@ -2,23 +2,85 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 .container{
-    background-color: rgb(192, 228, 230);
+    background:linear-gradient(0deg, rgb(192, 192, 239), rgb(128, 128, 245));
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
 }
 
 #todo-form{
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 10px;
-    box-shadow: 0 0 5px gray;
+    margin: 20px 0;
     width: 30%;
-    height: 70%;
-    box-shadow:0 0 5px gray;
+    height: 65%;
+    box-shadow:0 0 9px rgb(99, 98, 98);
 }
 
-#todo-form > div{
-    text-align: center;
+#todo-form div{
+    /* text-align: center; */
     margin: 45px 0;
+}
+
+textarea{
+    border-radius: 7px;
+    height: 50px;
+}
+input[type="text"]:hover, input[type="url"]:hover, input[type="date"]:hover, input[time]:hover {
+    box-shadow: 0 0 2px rgb(99, 98, 98);
+}
+
+#todo-form h1{
+    margin: 15px;
+    text-align: center;
+}
+
+#operations button{
+    color: black;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    margin: 0 10px;
+    width: 60px;
+    height: 20px;
+}
+#operations button:hover{
+    box-shadow: 0 0 2px rgb(99, 98, 98);
+    background-color: rgb(71, 120, 149);
+    color: whitesmoke;
+    transform: scale(1.5);
+}
+
+.task-details{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inputs{
+    background-color: aliceblue;
+    border-radius: 7px;
+    height: 25px;
+    width: 200px;
+}
+
+#id{
+    background-color: rgb(226, 242, 255);
+    color: rgb(21, 13, 13);
+}
+
+#totals{
+    background-color: whitesmoke;
+    margin: 10px;
+    width: 450px;
+    height: 50px;
+    padding: 11px 0;
+    text-align: center;
+    box-shadow: 0 0 2px rgb(99, 98, 98);
+    border-radius: 7px;
+
 }
