@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .container{
     background:linear-gradient(0deg, rgb(192, 192, 239), rgb(128, 128, 245));
@@ -14,73 +14,166 @@
     flex-direction: column; 
 }
 
+.container h1{
+    color: aliceblue;
+    position: absolute;
+    top: 20px;
+}
+
 #todo-form{
     background-color: whitesmoke;
+    color:rgb(126, 101, 194);
     border-radius: 10px;
-    margin: 20px 0;
-    width: 30%;
-    height: 65%;
+    margin: 5px 0;
+    width: 40%;
+    height: 37%;
     box-shadow:0 0 9px rgb(99, 98, 98);
 }
 
-#todo-form div{
-    /* text-align: center; */
-    margin: 45px 0;
-}
-
-textarea{
-    border-radius: 7px;
-    height: 50px;
-}
-input[type="text"]:hover, input[type="url"]:hover, input[type="date"]:hover, input[time]:hover {
-    box-shadow: 0 0 2px rgb(99, 98, 98);
-}
-
-#todo-form h1{
-    margin: 15px;
-    text-align: center;
-}
-
-#operations button{
-    color: black;
-    background-color:whitesmoke;
-    border-radius: 5px;
-    margin: 0 10px;
-    width: 60px;
-    height: 20px;
-}
-#operations button:hover{
-    box-shadow: 0 0 2px rgb(99, 98, 98);
-    background-color: rgb(71, 120, 149);
-    color: whitesmoke;
-    transform: scale(1.5);
-}
-
-.task-details{
+.row{
     display: flex;
-    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+
+.col1{
+    width: 25%;
+    padding-left: 10px;
+}
+.col2{
+    width: 70%;
+    padding-right: 10px;
+}
+
+#todo-form h2{
+    margin: 20px;
 }
 
 .inputs{
-    background-color: aliceblue;
-    border-radius: 7px;
-    height: 25px;
-    width: 200px;
+    background-color: #fff;
+    border-radius: 4px;
+    height: 28px;
+    padding:8px; 
+    border:1px solid #c1c1c1;
+    width: 100%;
+    margin: 0 auto;
 }
+
+input[type="text"]:hover, input[type="url"]:hover, input[type="date"]:hover, input[time]:hover, textarea:hover{
+    box-shadow: 0 0 2px rgb(99, 98, 98);
+} 
 
 #id{
     background-color: rgb(226, 242, 255);
     color: rgb(21, 13, 13);
 }
 
+textarea{
+    border-radius: 7px;
+    height: 50px;
+}
+
 #totals{
     background-color: whitesmoke;
-    margin: 10px;
-    width: 450px;
-    height: 50px;
-    padding: 11px 0;
+    margin: 5px auto;
+    width:40%;
+    padding: 10px 0;
     text-align: center;
     box-shadow: 0 0 2px rgb(99, 98, 98);
     border-radius: 7px;
+}
+
+#totals p{
+    margin: 5px;
+    color: rgb(71, 120, 149);
+}
+#operations{
+    margin:10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+#operations button{
+    color: whitesmoke;
+    background-color:rgb(121, 121, 234);
+    border-radius: 5px;
+    padding:8px 16px;
+    margin: 0 9px;
+    width: auto;
+    height: auto;
+    border: 1px solid #c1c1c1
+}
+#operations button:hover{
+    box-shadow: 0 0 2px rgb(99, 98, 98);
+    background-color: whitesmoke;
+    color: rgb(121, 121, 234);
+    border-radius: 5px;
+    padding:8px 16px;
+
+    width: auto;
+    height: auto;
+    border: 1px solid #c1c1c1;
+}
+
+#records{
+    background-color: whitesmoke;
+    width: 40%;
+    height: fit-content;
+    padding: 5px;
+    margin-top: 10px; ;
+    box-shadow: 0 0 2px rgb(99, 98, 98);
+    border-radius: 7px;
+}
+table{
+    margin:auto;
+    color: rgb(83, 138, 170);
+    border: 1px solid black;
+    border-radius: 7px;
+    border:1px solid #c1c1c1;
+    width: 100%;
+
+}
+
+th{
+    padding: 10px;
+    background-color: rgb(121, 121, 234);
+    color: whitesmoke;
+    border: 1px solid #c1c1c1;
+}
+
+td{
+    padding: 10px;
+    border: 1px solid #c1c1c1;
+}
+.mr-2{
+    margin-right: 10px;
+
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: rgb(5, 150, 234);
+}
+
+@media screen and (max-width: 760px){
+    #todo-form{
+        width:90%;
+        height:40%;
+        margin:5px;
+        padding: 5px;
+    }
+    .container{
+        background-color: rgb(140, 174, 238);
+    }
+    #operations, #records, #totals {
+        width: 100%;
+        margin: 10px;
+    }
+    table{
+        width: 100%;
+    }
 
 }

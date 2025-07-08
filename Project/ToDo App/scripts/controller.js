@@ -1,5 +1,5 @@
 // glue b/w view and model / service
-import { validateName } from "./validation.js";
+import { validate } from "./validation.js";
 import { todoOperations } from "./service.js";
 import { init } from "./utils.js";
 window.addEventListener('load', initialize); //script runs after loading of window's html
@@ -26,8 +26,8 @@ function addTask(){
         printTask(task);
         computeTotal();
         showId();
+        console.log('Task is ', task);
     }
-    console.log('Task is ', task);
 }
 
 function printTask(task){
@@ -40,7 +40,7 @@ function printTask(task){
     }
     const td=tr.insertCell(index);
     td.appendChild(createIcon(task.id, toggleMarking));
-    td.appendChild(createIcon(task.id, edit,'fa-pen'));
+    td.appendChild(createIcon(task.id, edit,'fa-pen blue'));
 }
 
 function computeTotal(){
@@ -57,7 +57,7 @@ function edit(){
     console.log('edit marking call');
 }
 
-function createIcon(id, fn, className='fa-trash'){
+function createIcon(id, fn, className='fa-trash mr-2 red'){
     const iTag = document.createElement('i');
     iTag.className=`fa-solid ${className}`;
     iTag.addEventListener('click',fn);
@@ -67,17 +67,22 @@ function createIcon(id, fn, className='fa-trash'){
 }
 
 function verifyFields(task){
-    let errorMessage=""
-    errorMessage=validateName(task.name);
+    let errorMessage="";
+    errorMessage=validate.validateName(task['task-name']);
     if(errorMessage){
         document.getElementById('name-error').innerText=errorMessage;
+        return false;
+    }
+    errorMessage=validate.validateDesc(task['description']);
+    if(errorMessage){
+        document.getElementById('desc-error').innerText=errorMessage;
         return false;
     }
     return true;
 }
 
 function readFields(){
-    const FIELDS = ['id', 'task-name', 'description', 'date', 'time', 'photo'];
+    const FIELDS = ["id", "task-name", "description", "date", "time", "photo"];
     var task={};
     for(let field of FIELDS){
         if(field=='id'){
